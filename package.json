@@ -1,0 +1,23 @@
+{
+  "name": "survival-shooting-game",
+  "version": "1.0.0",
+  "description": "A browser-based survival shooting game where players fight waves of enemies",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "dev": "npx http-server -p 8080 -o -c-1"
+  },
+  "keywords": [
+    "game",
+    "shooting",
+    "survival",
+    "javascript",
+    "canvas",
+    "browser-game"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
