@@ -266,13 +266,13 @@ class Game {
     }
     
     loop() {
-        if (!this.paused) {
-            this.update();
-            this.draw();
-            
-            if (this.gameRunning) {
-                requestAnimationFrame(() => this.loop());
-            }
+        if (this.paused) return;
+        
+        this.update();
+        this.draw();
+        
+        if (this.gameRunning) {
+            requestAnimationFrame(() => this.loop());
         }
     }
 }

@@ -50,8 +50,7 @@ class Player extends Entity {
             this.reload();
         }
         
-        // Update powerup timers
-        this.updatePowerups();
+
     }
     
     shoot() {
@@ -133,9 +132,7 @@ class Player extends Entity {
         }, duration);
     }
     
-    updatePowerups() {
-        // Timers are handled by setTimeout
-    }
+
     
     draw(ctx) {
         // Draw player body
