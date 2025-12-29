@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survival Shooting Game</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="menu-screen" class="screen active">
+            <h1>Survival Shooting Game</h1>
+            <div class="menu-content">
+                <button id="start-button" class="btn btn-primary">Start Game</button>
+                <button id="instructions-button" class="btn btn-secondary">Instructions</button>
+                <button id="highscores-button" class="btn btn-secondary">High Scores</button>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div id="game-hud">
+                <div class="hud-item">
+                    <span class="hud-label">Score:</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Health:</span>
+                    <div id="health-bar">
+                        <div id="health-fill"></div>
+                    </div>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Wave:</span>
+                    <span id="wave">1</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Ammo:</span>
+                    <span id="ammo">30</span>
+                </div>
+            </div>
+            <canvas id="game-canvas"></canvas>
+            <button id="pause-button" class="btn btn-pause">Pause</button>
+        </div>
+
+        <div id="pause-screen" class="screen">
+            <h2>Paused</h2>
+            <button id="resume-button" class="btn btn-primary">Resume</button>
+            <button id="restart-button" class="btn btn-secondary">Restart</button>
+            <button id="menu-button" class="btn btn-secondary">Main Menu</button>
+        </div>
+
+        <div id="gameover-screen" class="screen">
+            <h2>Game Over</h2>
+            <div class="gameover-content">
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p>Wave Reached: <span id="final-wave">1</span></p>
+                <input type="text" id="player-name" placeholder="Enter your name" maxlength="15">
+                <button id="save-score-button" class="btn btn-primary">Save Score</button>
+                <button id="play-again-button" class="btn btn-secondary">Play Again</button>
+                <button id="back-menu-button" class="btn btn-secondary">Main Menu</button>
+            </div>
+        </div>
+
+        <div id="instructions-screen" class="screen">
+            <h2>Instructions</h2>
+            <div class="instructions-content">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li><strong>WASD</strong> or <strong>Arrow Keys</strong> - Move player</li>
+                    <li><strong>Mouse</strong> - Aim</li>
+                    <li><strong>Left Click</strong> or <strong>Space</strong> - Shoot</li>
+                    <li><strong>R</strong> - Reload</li>
+                    <li><strong>P</strong> or <strong>ESC</strong> - Pause</li>
+                </ul>
+                <h3>Objective:</h3>
+                <p>Survive waves of enemies by shooting them down. Each wave increases in difficulty. 
+                   Collect power-ups to improve your chances. Don't let your health reach zero!</p>
+                <button id="back-from-instructions" class="btn btn-primary">Back</button>
+            </div>
+        </div>
+
+        <div id="highscores-screen" class="screen">
+            <h2>High Scores</h2>
+            <div class="highscores-content">
+                <table id="highscores-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Wave</th>
+                        </tr>
+                    </thead>
+                    <tbody id="highscores-body">
+                        <!-- Scores will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <button id="back-from-scores" class="btn btn-primary">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/config.js"></script>
+    <script src="src/js/utils.js"></script>
+    <script src="src/js/input.js"></script>
+    <script src="src/js/entities.js"></script>
+    <script src="src/js/player.js"></script>
+    <script src="src/js/enemy.js"></script>
+    <script src="src/js/projectile.js"></script>
+    <script src="src/js/powerup.js"></script>
+    <script src="src/js/collision.js"></script>
+    <script src="src/js/game.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
